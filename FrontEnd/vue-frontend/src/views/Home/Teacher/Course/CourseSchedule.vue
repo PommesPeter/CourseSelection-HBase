@@ -83,7 +83,7 @@ export default {
       let form = new FormData()
       form.append("file", fileObj, fileObj.filename)
       console.log("==" + form.get("file"), fileObj, form)
-      this.$axios.post("all/upload_file/info_type=course", form, {
+      this.$axios.post("all/upload_file/info_type=student", form, {
         headers: {'Content-Type': 'multipart/form-data'}
       }).then(res => {
         location.reload()
